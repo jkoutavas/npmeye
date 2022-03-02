@@ -9,6 +9,7 @@ NPM registry command line interface
 [![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
 
 <!-- toc -->
+* [npmi](#npmi)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
@@ -19,7 +20,7 @@ $ npm install -g npmi
 $ npmi COMMAND
 running command...
 $ npmi (--version)
-npmi/0.0.0 darwin-x64 node-v17.3.0
+npmi/0.0.0 darwin-x64 node-v14.17.3
 $ npmi --help [COMMAND]
 USAGE
   $ npmi COMMAND
@@ -28,55 +29,15 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`npmi hello PERSON`](#npmi-hello-person)
-* [`npmi hello world`](#npmi-hello-world)
 * [`npmi help [COMMAND]`](#npmi-help-command)
+* [`npmi maintainer MAINTAINER`](#npmi-maintainer-maintainer)
 * [`npmi plugins`](#npmi-plugins)
 * [`npmi plugins:inspect PLUGIN...`](#npmi-pluginsinspect-plugin)
 * [`npmi plugins:install PLUGIN...`](#npmi-pluginsinstall-plugin)
 * [`npmi plugins:link PLUGIN`](#npmi-pluginslink-plugin)
 * [`npmi plugins:uninstall PLUGIN...`](#npmi-pluginsuninstall-plugin)
 * [`npmi plugins update`](#npmi-plugins-update)
-
-## `npmi hello PERSON`
-
-Say hello
-
-```
-USAGE
-  $ npmi hello [PERSON] -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Whom is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [dist/commands/hello/index.ts](https://github.com/jkoutavas/npmi/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `npmi hello world`
-
-Say hello world
-
-```
-USAGE
-  $ npmi hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ oex hello world
-  hello world! (./src/commands/hello/world.ts)
-```
+* [`npmi repo dependencies REPO [DEV]`](#npmi-repo-dependencies-repo-dev)
 
 ## `npmi help [COMMAND]`
 
@@ -98,6 +59,26 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.11/src/commands/help.ts)_
 
+## `npmi maintainer MAINTAINER`
+
+List repos for a maintainer
+
+```
+USAGE
+  $ npmi maintainer [MAINTAINER]
+
+ARGUMENTS
+  MAINTAINER  maintainer's name
+
+DESCRIPTION
+  List repos for a maintainer
+
+EXAMPLES
+  $ npmi maintainer doowb
+```
+
+_See code: [dist/commands/maintainer/index.ts](https://github.com/jkoutavas/npmi/blob/v0.0.0/dist/commands/maintainer/index.ts)_
+
 ## `npmi plugins`
 
 List installed plugins.
@@ -116,7 +97,7 @@ EXAMPLES
   $ npmi plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.0.11/src/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.0/src/commands/plugins/index.ts)_
 
 ## `npmi plugins:inspect PLUGIN...`
 
@@ -242,5 +223,27 @@ FLAGS
 
 DESCRIPTION
   Update installed plugins.
+```
+
+## `npmi repo dependencies REPO [DEV]`
+
+List a repo's dependencies for the specified version.
+
+```
+USAGE
+  $ npmi repo dependencies [REPO] [DEV] [-v <value>]
+
+ARGUMENTS
+  REPO  repo's name
+  DEV   if specified, lists dev dependencies instead
+
+FLAGS
+  -v, --version=<value>  [default: latest]
+
+DESCRIPTION
+  List a repo's dependencies for the specified version.
+
+EXAMPLES
+  $ npmi repo dependencies npm-api
 ```
 <!-- commandsstop -->
