@@ -21,7 +21,7 @@ $ npm install -g npmeye
 $ npmeye COMMAND
 running command...
 $ npmeye (--version)
-npmeye/0.1.0 darwin-x64 node-v14.17.3
+npmeye/0.1.1 darwin-x64 node-v14.17.3
 $ npmeye --help [COMMAND]
 USAGE
   $ npmeye COMMAND
@@ -74,7 +74,7 @@ EXAMPLES
   $ npmi maintainer doowb
 ```
 
-_See code: [dist/commands/maintainer/index.ts](https://github.com/jkoutavas/npmeye/blob/v0.1.0/dist/commands/maintainer/index.ts)_
+_See code: [dist/commands/maintainer/index.ts](https://github.com/jkoutavas/npmeye/blob/v0.1.1/dist/commands/maintainer/index.ts)_
 
 ## `npmeye repo dependencies REPO [DEV]`
 

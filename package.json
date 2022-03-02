@@ -1,6 +1,6 @@
 {
   "name": "npmeye",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NPM registry command line interface",
   "author": "Jay Koutavas jay@heynow.com",
   "bin": {
