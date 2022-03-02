@@ -20,7 +20,8 @@
     "@oclif/core": "^1.4.0",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.1.0",
-    "npm-api": "^1.0.1"
+    "npm-api": "^1.0.1",
+    "prettier": "^2.5.1"
   },
   "devDependencies": {
     "@oclif/test": "^2",
@@ -61,7 +62,8 @@
     "posttest": "yarn lint",
     "prepack": "yarn build && oclif manifest && oclif readme",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
+    "version": "oclif readme && git add README.md",
+    "validate": "npm run lint && npm run test"
   },
   "engines": {
     "node": ">=12.0.0"

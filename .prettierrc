@@ -1,0 +1,5 @@
+{
+    "singlequotes": true,
+    "trailingcomma": "es6",
+    "printwidth": 100
+}
