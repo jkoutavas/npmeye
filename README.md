@@ -71,7 +71,7 @@ DESCRIPTION
   List repos for a maintainer
 
 EXAMPLES
-  $ npmi maintainer doowb
+  $ npmeye maintainer doowb
 ```
 
 _See code: [dist/commands/maintainer/index.ts](https://github.com/jkoutavas/npmeye/blob/v0.1.1/dist/commands/maintainer/index.ts)_
@@ -95,6 +95,6 @@ DESCRIPTION
   List a repo's dependencies for the specified version.
 
 EXAMPLES
-  $ npmi repo dependencies npm-api
+  $ npmeye repo dependencies npm-api
 ```
 <!-- commandsstop -->
