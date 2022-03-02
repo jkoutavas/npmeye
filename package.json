@@ -1,15 +1,15 @@
 {
-  "name": "npmi",
+  "name": "npmeye",
   "version": "0.1.0",
   "description": "NPM registry command line interface",
   "author": "Jay Koutavas jay@heynow.com",
   "bin": {
-    "npmi": "./bin/run"
+    "npmeye": "./bin/run"
   },
-  "homepage": "https://github.com/jkoutavas/npmi",
+  "homepage": "https://github.com/jkoutavas/npmeye",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "jkoutavas/npmi",
+  "repository": "jkoutavas/npmeye",
   "files": [
     "/bin",
     "/dist",
@@ -42,8 +42,8 @@
     "typescript": "^4.6.2"
   },
   "oclif": {
-    "bin": "npmi",
-    "dirname": "npmi",
+    "bin": "npmeye",
+    "dirname": "npmeye",
     "commands": "./dist/commands",
     "plugins": [
       "@oclif/plugin-help"
@@ -68,7 +68,7 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "bugs": "https://github.com/jkoutavas/npmi/issues",
+  "bugs": "https://github.com/jkoutavas/npmeye/issues",
   "keywords": [
     "oclif"
   ],

@@ -4,7 +4,7 @@ const npm = new NpmApi();
 export default class Dependencies extends Command {
   static description = "List a repo's dependencies for the specified version.";
 
-  static examples = [`$ npmi repo dependencies npm-api`];
+  static examples = [`$ npmeye repo dependencies npm-api`];
 
   static args = [
     {

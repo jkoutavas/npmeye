@@ -6,7 +6,7 @@ const npm = new NpmApi();
 export default class Maintainer extends Command {
   static description = "List repos for a maintainer";
 
-  static examples = [`$ npmi maintainer doowb`];
+  static examples = [`$ npmeye maintainer doowb`];
 
   static args = [
     {
