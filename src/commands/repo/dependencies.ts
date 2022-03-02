@@ -22,27 +22,27 @@ export default class Dependencies extends Command {
     version: Flags.string({ char: "v", default: "latest" }),
   };
 
+  listDependencies = (pkg: any) => {
+    console.log(pkg);
+  };
+
+  showError = (err: any) => {
+    console.error(err);
+  };
+
   async run(): Promise<void> {
     const { args, flags } = await this.parse(Dependencies);
     const repo = npm.repo(args.repo);
     if (args.dev !== undefined) {
-      repo.devDependencies(flags.version).then(
-        function (pkg: any) {
-          console.log(pkg);
-        },
-        function (err: any) {
-          console.error(err);
-        }
-      );
+      repo
+        .devDependencies(flags.version)
+        .then((pkg: any) => this.listDependencies(pkg))
+        .catch((err: any) => this.showError(err));
     } else {
-      repo.dependencies(flags.version).then(
-        function (pkg: any) {
-          console.log(pkg);
-        },
-        function (err: any) {
-          console.error(err);
-        }
-      );
+      repo
+        .dependencies(flags.version)
+        .then((pkg: any) => this.listDependencies(pkg))
+        .catch((err: any) => this.showError(err));
     }
   }
 }
