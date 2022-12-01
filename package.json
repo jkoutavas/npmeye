@@ -21,7 +21,7 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.1.0",
     "npm-api": "^1.0.1",
-    "prettier": "^2.5.1",
+    "prettier": "^2.8.0",
     "pretty-print": "^2.0.0"
   },
   "devDependencies": {
